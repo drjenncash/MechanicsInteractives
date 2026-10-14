@@ -48,10 +48,10 @@ l3, = plt.plot(t,under,lw=2,color='green')
 
 #setup Slider axes areas
 axcolor = 'Lavender'
-axpos = plt.axes([0.25, 0.25, 0.65, 0.03], axisbg=axcolor)
-axvel = plt.axes([0.25, 0.2, 0.65, 0.03], axisbg=axcolor)
-axgam1 = plt.axes([0.25, 0.15, 0.65, 0.03], axisbg=axcolor)
-axgam2 = plt.axes([0.25, 0.10, 0.65, 0.03], axisbg=axcolor)
+axpos = plt.axes([0.25, 0.25, 0.65, 0.03], facecolor=axcolor)
+axvel = plt.axes([0.25, 0.2, 0.65, 0.03], facecolor=axcolor)
+axgam1 = plt.axes([0.25, 0.15, 0.65, 0.03], facecolor=axcolor)
+axgam2 = plt.axes([0.25, 0.10, 0.65, 0.03], facecolor=axcolor)
 
 #initialize Slider widgets
 spos = Slider(axpos, 'Initial Position', 0, 10.0, valinit=x0)
@@ -70,7 +70,7 @@ def update(val):
     #plot for the critical damping
     Ac = vel +  w0*pos
     Bc = pos
-    l1.set_ydata(Ac*t*np.exp(-g1*t) + Bc*np.exp(-g1*t))
+    l1.set_ydata(Ac*t*np.exp(-g1*t) + Bc*np.exp(-g0*t))
     
     #plot for the overdamped case
     q = np.sqrt(gamma1**2 - w0**2)
