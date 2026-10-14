@@ -8,6 +8,7 @@ conditions to see the affect on all three curves. For this program, the
 original omega_naught value is set to 1 and not allowed to change.
 
 created by J Cash 10/19/2016
+revised 10/14/2026 (changed axisbg to facecolor)
 """
 
 import numpy as np
@@ -49,9 +50,9 @@ l, = plt.plot(x,v,color='green')
 
 #setup Slider axes areas
 axcolor = 'Lavender'
-axpos = plt.axes([0.25, 0.25, 0.65, 0.03], axisbg=axcolor)
-axvel = plt.axes([0.25, 0.2, 0.65, 0.03], axisbg=axcolor)
-axgam = plt.axes([0.25, 0.15, 0.65, 0.03], axisbg=axcolor)
+axpos = plt.axes([0.25, 0.25, 0.65, 0.03], facecolor=axcolor)
+axvel = plt.axes([0.25, 0.2, 0.65, 0.03], facecolor=axcolor)
+axgam = plt.axes([0.25, 0.15, 0.65, 0.03], facecolor=axcolor)
 
 
 #initialize Slider widgets
