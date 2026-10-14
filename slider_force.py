@@ -51,8 +51,8 @@ plt.axis([0, 100, -10, 10])
 
 #setup the slider bars
 axcolor = 'Lavender'
-axfreq = plt.axes([0.25, 0.2, 0.65, 0.03], axisbg=axcolor)
-axgam = plt.axes([0.25, 0.1, 0.65, 0.03], axisbg=axcolor)
+axfreq = plt.axes([0.25, 0.2, 0.65, 0.03], facecolor=axcolor)
+axgam = plt.axes([0.25, 0.1, 0.65, 0.03], facecolor=axcolor)
 
 #setup the ranges and default values for the sliders
 sfreq = Slider(axfreq, 'Freq', 0.1, 3.0, valinit=omegaf)
